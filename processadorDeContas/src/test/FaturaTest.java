@@ -21,4 +21,14 @@ public class FaturaTest {
 
     }
 
+
+    @Test
+    public void testStatusFaturaComPagamentoInsuficiente() {
+        Fatura fatura = new Fatura("12-12-2024", 150.00, "Cliente Teste");
+        assertEquals(Fatura.StatusFatura.PENDENTE, fatura.getStatus());
+        fatura.verificarStatusPagamento(100.00);
+        assertEquals(Fatura.StatusFatura.PENDENTE, fatura.getStatus());
+    }
+
+
 }
