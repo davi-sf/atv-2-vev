@@ -7,6 +7,9 @@ public class Pagamento {
     private String tipoPagamento;
 
     public Pagamento(double valorPago, String dataPagamento, String tipoPagamento) {
+        this.valorPago = valorPago;
+        this.dataPagamento = dataPagamento;
+        this.tipoPagamento = tipoPagamento;
 
     }
 

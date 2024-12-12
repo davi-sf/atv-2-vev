@@ -8,6 +8,9 @@ public class Conta {
 
 
     public Conta(String codigoDaConta, String data, double valorPago) {
+        this.codigoDaConta = codigoDaConta;
+        this.data = data;
+        this.valorPago = valorPago;
     }
 
     public String getCodigoDaConta() {
