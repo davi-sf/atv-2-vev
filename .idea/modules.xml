@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/atv-2-vev.iml" filepath="$PROJECT_DIR$/.idea/atv-2-vev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/processadorDeContas/processadorDeContas.iml" filepath="$PROJECT_DIR$/processadorDeContas/processadorDeContas.iml" />
+    </modules>
+  </component>
+</project>
