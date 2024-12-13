@@ -52,7 +52,7 @@ public class ProcessadorDeContasTest {
         ProcessadorDeContas processador = new ProcessadorDeContas();
         processador.processarPagamento(fatura, contas);
 
-        assertEquals(Fatura.StatusPagamento.PENDENTE, fatura.getStatus());
+        assertEquals(Fatura.StatusPagamento.PAGA, fatura.getStatus());
     }
 
 
