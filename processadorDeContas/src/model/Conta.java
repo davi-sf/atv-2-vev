@@ -1,16 +1,19 @@
 package model;
+import Enum.TipoPagamento;
 
 public class Conta {
 
     private String codigoDaConta;
     private String data;
     private double valorPago;
+    private TipoPagamento tipoPagamento;
 
 
-    public Conta(String codigoDaConta, String data, double valorPago) {
+    public Conta(String codigoDaConta, String data, double valorPago, TipoPagamento tipoPagamento) {
         this.codigoDaConta = codigoDaConta;
         this.data = data;
         this.valorPago = valorPago;
+        this.tipoPagamento = tipoPagamento;
     }
 
     public String getCodigoDaConta() {
@@ -35,6 +38,13 @@ public class Conta {
 
     public void setValorPago(double valorPago) {
         this.valorPago = valorPago;
+    }
+
+    public TipoPagamento getTipoPagamento() {
+        return tipoPagamento;
+    }
+    public void setTipoPagamento(TipoPagamento tipoPagamento) {
+        this.tipoPagamento = tipoPagamento;
     }
 
 }
