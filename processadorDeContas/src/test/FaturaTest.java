@@ -4,7 +4,7 @@ import model.Conta;
 import model.Fatura;
 import model.ProcessadorDeContas;
 import org.junit.Test;
-import Enum.TipoPagamento;
+import model.TipoPagamentoEnum;
 
 import java.util.List;
 
@@ -31,7 +31,7 @@ public class FaturaTest {
     public void testStatusFaturaComPagamentoInsuficiente() {
         Fatura fatura = new Fatura("12-12-2024", 150.00, "Cliente Teste");
 
-        Conta conta1 = new Conta("001", "12-12-2024", 100.00, TipoPagamento.BOLETO);
+        Conta conta1 = new Conta("001", "12-12-2024", 100.00, TipoPagamentoEnum.BOLETO);
         List<Conta> contas = List.of(conta1);
 
 

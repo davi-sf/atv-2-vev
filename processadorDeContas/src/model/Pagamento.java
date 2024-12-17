@@ -1,21 +1,21 @@
 package model;
-import Enum.TipoPagamento;
+
 public class Pagamento {
 
     private double valorPago;
     private String dataPagamento;
-    private TipoPagamento tipoPagamento;
+    private TipoPagamentoEnum tipoPagamentoEnum;
 
 
 
-    public Pagamento(double valorPago, String dataPagamento, TipoPagamento tipoPagamento) {
+    public Pagamento(double valorPago, String dataPagamento, TipoPagamentoEnum tipoPagamentoEnum) {
         this.valorPago = valorPago;
         this.dataPagamento = dataPagamento;
-        this.tipoPagamento = tipoPagamento;
+        this.tipoPagamentoEnum = tipoPagamentoEnum;
     }
 
     public double calcularValorPagoComAjustes(Fatura fatura, Conta conta) {
-        if (this.tipoPagamento == TipoPagamento.BOLETO) {
+        if (this.tipoPagamentoEnum == TipoPagamentoEnum.BOLETO) {
 
             if (isPagamentoComAtraso(conta)) {
                 return valorPago * 1.10;
@@ -45,7 +45,7 @@ public class Pagamento {
         return dataPagamento;
     }
 
-    public TipoPagamento getTipoPagamento() {
-        return tipoPagamento;
+    public TipoPagamentoEnum getTipoPagamento() {
+        return tipoPagamentoEnum;
     }
 }
