@@ -3,7 +3,7 @@ package test;
 import model.Conta;
 import model.Fatura;
 import model.TipoPagamentoEnum;
-import model.ProcessadorDeContas;
+import controller.ProcessadorDeContasController;
 import org.junit.Test;
 
 import java.util.List;
@@ -21,7 +21,7 @@ public class ProcessadorDeContasTest {
                 new Conta("003", "20-02-2023", 600.00, TipoPagamentoEnum.BOLETO)
         );
 
-        ProcessadorDeContas processador = new ProcessadorDeContas();
+        ProcessadorDeContasController processador = new ProcessadorDeContasController();
         processador.processarPagamento(fatura, contas);
 
         assertEquals(Fatura.StatusPagamento.PAGA, fatura.getStatus());
@@ -35,7 +35,7 @@ public class ProcessadorDeContasTest {
                 new Conta("005", "17-02-2023", 800.00, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA)
         );
 
-        ProcessadorDeContas processador = new ProcessadorDeContas();
+        ProcessadorDeContasController processador = new ProcessadorDeContasController();
         processador.processarPagamento(fatura, contas);
 
         assertEquals(Fatura.StatusPagamento.PAGA, fatura.getStatus());
@@ -49,7 +49,7 @@ public class ProcessadorDeContasTest {
                 new Conta("007", "17-02-2023", 800.00, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA)
         );
 
-        ProcessadorDeContas processador = new ProcessadorDeContas();
+        ProcessadorDeContasController processador = new ProcessadorDeContasController();
         processador.processarPagamento(fatura, contas);
 
         assertEquals(Fatura.StatusPagamento.PAGA, fatura.getStatus());

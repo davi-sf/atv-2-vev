@@ -1,8 +1,12 @@
-package model;
+package controller;
+
+import model.Conta;
+import model.Fatura;
+import model.Pagamento;
 
 import java.util.List;
 
-public class ProcessadorDeContas {
+public class ProcessadorDeContasController {
 
     public void processarPagamento(Fatura fatura, List<Conta> contas) {
         double totalPago = 0.00;

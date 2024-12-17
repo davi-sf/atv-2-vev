@@ -2,7 +2,7 @@ package test;
 
 import model.Conta;
 import model.Fatura;
-import model.ProcessadorDeContas;
+import controller.ProcessadorDeContasController;
 import org.junit.Test;
 import model.TipoPagamentoEnum;
 
@@ -35,7 +35,7 @@ public class FaturaTest {
         List<Conta> contas = List.of(conta1);
 
 
-        ProcessadorDeContas processador = new ProcessadorDeContas();
+        ProcessadorDeContasController processador = new ProcessadorDeContasController();
         processador.processarPagamento(fatura, contas);
 
 

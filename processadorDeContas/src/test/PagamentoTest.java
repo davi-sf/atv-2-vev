@@ -3,7 +3,7 @@ package test;
 import model.Conta;
 import model.Fatura;
 import model.Pagamento;
-import model.ProcessadorDeContas;
+import controller.ProcessadorDeContasController;
 import org.junit.Test;
 import model.TipoPagamentoEnum;
 
@@ -53,7 +53,7 @@ public class PagamentoTest {
         Conta conta = new Conta("001", "15-02-2024", 700.00, TipoPagamentoEnum.CARTAO_CREDITO);
         List<Conta> contas = List.of(conta);
 
-        ProcessadorDeContas processador = new ProcessadorDeContas();
+        ProcessadorDeContasController processador = new ProcessadorDeContasController();
         processador.processarPagamento(fatura, contas);
 
 
@@ -69,7 +69,7 @@ public class PagamentoTest {
         Conta conta = new Conta("001", "01-02-2024", 700.00, TipoPagamentoEnum.CARTAO_CREDITO);
         List<Conta> contas = List.of(conta);
 
-        ProcessadorDeContas processador = new ProcessadorDeContas();
+        ProcessadorDeContasController processador = new ProcessadorDeContasController();
         processador.processarPagamento(fatura, contas);
 
 
