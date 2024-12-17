@@ -1,8 +1,7 @@
 package test;
 
 import model.Conta;
-import model.Fatura;
-import Enum.TipoPagamento;
+import model.TipoPagamentoEnum;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -12,7 +11,7 @@ public class ContaTest {
     @Test
     public void testCriarContaComDadosValidos() {
 
-        Conta conta = new Conta("12122024", "12-12-2024", 150, TipoPagamento.BOLETO);
+        Conta conta = new Conta("12122024", "12-12-2024", 150, TipoPagamentoEnum.BOLETO);
 
         double delta = 0.0001;
 
