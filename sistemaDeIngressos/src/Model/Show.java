@@ -75,4 +75,9 @@ public class Show {
     public String getArtista() {
         return artista;
     }
+
+    public Object getStatus() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getStatus'");
+    }
 }
