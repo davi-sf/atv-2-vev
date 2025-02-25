@@ -6,6 +6,7 @@ import Model.Lote;
 import Model.Show;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class FunctionalTests {
    
@@ -102,7 +103,49 @@ public class FunctionalTests {
         assertEquals(10, ingressosNormal[0].getValor());
     }   
 
-        @Test
+
+    @Test
+    public void TesteValorIngresso() {
+        Ingresso[] ingressos = {
+        new Ingresso("123abc", TipoIngresso.VIP, false, 30),
+        new Ingresso("123abc", TipoIngresso.VIP, false, 30),
+        new Ingresso("789ghi", TipoIngresso.NORMAL, false, 20),
+        new Ingresso("789ghi", TipoIngresso.NORMAL, false, 20),
+        new Ingresso("789ghi", TipoIngresso.NORMAL, false, 20),
+        new Ingresso("789ghi", TipoIngresso.NORMAL, false, 20),
+        new Ingresso("789ghi", TipoIngresso.NORMAL, false, 20),
+        new Ingresso("789ghi", TipoIngresso.NORMAL, false, 20),
+        new Ingresso("789ghi", TipoIngresso.NORMAL, false, 20),
+        new Ingresso("091efg", TipoIngresso.MEIA_ENTRADA, false, 10),
+        };
+        Lote lote = new Lote("456def", ingressos, 10);
+
+        lote.setValorIngresso(10);
+        assertEquals(20, lote.getValorIngressoVip());
+        assertEquals(10, lote.getValorIngressoNormal());
+        assertEquals(5, lote.getValorIngressoMeia());
+
+        assertNotEquals(6, lote.getValorIngressoMeia());
+        assertNotEquals(4, lote.getValorIngressoMeia());
+        assertNotEquals(10, lote.getValorIngressoMeia());
+
+        lote.setValorIngresso(11);
+        assertEquals(11, lote.getValorIngressoNormal());
+        assertNotEquals(20, lote.getValorIngressoVip());
+        assertNotEquals(5, lote.getValorIngressoMeia());
+
+        lote.setValorIngresso(9);
+        assertEquals(9, lote.getValorIngressoNormal());
+        assertNotEquals(20, lote.getValorIngressoVip());
+        assertNotEquals(5, lote.getValorIngressoMeia());
+
+        
+
+
+    }    
+
+
+    @Test
     public void TesteLucroPrejuizo() {
         Ingresso[] ingressos = {
             new Ingresso("123abc", TipoIngresso.VIP, true, 30),
