@@ -53,4 +53,24 @@ public class Lote {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'isQtdIngressosValidos'");
     }
+
+    public void setValorIngresso(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setValorIngresso'");
+    }
+
+    public Object getValorIngressoVip() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getValorIngressoVip'");
+    }
+
+    public Object getValorIngressoNormal() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getValorIngressoNormal'");
+    }
+
+    public Object getValorIngressoMeia() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getValorIngressoMeia'");
+    }
 }
