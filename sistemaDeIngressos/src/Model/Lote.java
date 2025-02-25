@@ -26,9 +26,51 @@ public class Lote {
         return idLote;
     }
 
-    public void setDesconto(float desconto) {
+    public boolean setDesconto(float desconto) {
         if(desconto <= 25) {
         this.desconto = desconto;
+        return true;
         }
+        return false;
+    }
+
+    public Ingresso[] getIngressosVip() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getIngressosVip'");
+    }
+
+    public Ingresso[] getIngressosNormal() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getIngressosNormal'");
+    }
+
+    public Ingresso[] getIngressosMeia() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getIngressosMeia'");
+    }
+
+    public Object isQtdIngressosValidos() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isQtdIngressosValidos'");
+    }
+
+    public void setValorIngresso(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setValorIngresso'");
+    }
+
+    public Object getValorIngressoVip() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getValorIngressoVip'");
+    }
+
+    public Object getValorIngressoNormal() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getValorIngressoNormal'");
+    }
+
+    public Object getValorIngressoMeia() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getValorIngressoMeia'");
     }
 }
